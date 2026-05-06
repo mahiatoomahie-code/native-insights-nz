@@ -7,200 +7,178 @@ export default function Home() {
         overflow: "hidden",
         fontFamily: "Arial, sans-serif",
         color: "#F7F0E4",
+        background: "#061006",
       }}
     >
-      {/* VIDEO BACKGROUND */}
       <video
         autoPlay
         muted
         loop
         playsInline
         style={{
-          position: "absolute",
+          position: "fixed",
+          top: 0,
+          left: 0,
           width: "100%",
           height: "100%",
           objectFit: "cover",
-          top: 0,
-          left: 0,
-          zIndex: -2,
+          zIndex: 0,
         }}
       >
         <source
-          src={"https://cdn.coverr.co/videos/coverr-aerial-view-of-rocky-coastline-1560082467046?download=1080p"}
+          src="https://videos.pexels.com/video-files/854671/854671-hd_1920_1080_25fps.mp4"
           type="video/mp4"
         />
       </video>
 
-      {/* DARK OVERLAY */}
       <div
         style={{
-          position: "absolute",
+          position: "fixed",
           inset: 0,
-          background: "linear-gradient(to bottom, linear-gradient(to bottom, rgba(8,16,8,0.35), rgba(0,0,0,0.65)), rgba(0,0,0,0.72))",
-          zIndex: -1,
+          background:
+            "linear-gradient(to bottom, rgba(4,12,4,0.45), rgba(0,0,0,0.78))",
+          zIndex: 1,
         }}
       />
 
-      {/* NAVIGATION */}
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          padding: "30px 60px",
-          flexWrap: "wrap",
-          gap: "20px",
-        }}
-      >
-        <div
+      <div style={{ position: "relative", zIndex: 2 }}>
+        <nav
           style={{
             display: "flex",
+            justifyContent: "space-between",
             alignItems: "center",
-            gap: "14px",
-          }}
-        >
-          <img
-            src="/logo.png"
-            alt="NI Logo"
-            style={{
-              width: "60px",
-              height: "60px",
-              objectFit: "contain",
-            }}
-          />
-
-          <div
-            style={{
-              fontSize: "26px",
-              fontWeight: "bold",
-            }}
-          >
-            Native Insights
-          </div>
-        </div>
-
-        <div
-          style={{
-            display: "flex",
-            gap: "24px",
+            padding: "28px 7%",
             flexWrap: "wrap",
+            gap: "20px",
           }}
         >
-          <a href="/services" style={navStyle}>
-            Services
-          </a>
-
-          <a href="/" style={navStyle}>
-            Story
-          </a>
-
-          <a href="/" style={navStyle}>
-            Reviews
-          </a>
-
-          <a
-            href="mailto:tewaharoa@nativeinsights.co.nz"
-            style={goldButton}
-          >
-            Let&apos;s Kōrero
-          </a>
-        </div>
-      </div>
-
-      {/* HERO CONTENT */}
-      <div
-        style={{
-          minHeight: "80vh",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          padding: "40px",
-        }}
-      >
-        <div
-          style={{
-            maxWidth: "720px",
-            textAlign: "center",
-            background: "rgba(10, 18, 10, 0.58)",
-            backdropFilter: "blur(4px)",
-            padding: "32px",
-            borderRadius: "22px",
-            border: "1px solid rgba(195,164,109,0.35)",
-          }}
-        >
-          <img
-            src="/logo.png"
-            alt="Native Insights"
-            style={{
-              width: "140px",
-              marginBottom: "30px",
-            }}
-          />
-
-          <h1
-            style={{
-              fontSize: "48px",
-              marginBottom: "20px",
-              lineHeight: "1.1",
-            }}
-          >
-            Native Insights |<br />
-            Ngā Māramatanga ā-Iwi
-          </h1>
-
-          <p
-            style={{
-              fontSize: "18px",
-              lineHeight: "1.7",
-              color: "#E8E1D5",
-              marginBottom: "40px",
-            }}
-          >
-            We support Māori businesses and
-            kaupapa-led organisations to strengthen the
-            way they work, grow, and navigate the future.
-            <br /><br />
-            We bring together kaupapa Māori, practical
-            systems, AI, digital tools, and strategic
-            support so your organisation can move forward
-            with clarity while staying grounded in who you are.
-          </p>
+          <div style={{ display: "flex", alignItems: "center", gap: "14px" }}>
+            <img
+              src="/logo.png"
+              alt="Native Insights logo"
+              style={{
+                width: "72px",
+                height: "72px",
+                objectFit: "contain",
+              }}
+            />
+          </div>
 
           <div
             style={{
               display: "flex",
-              justifyContent: "center",
-              gap: "20px",
+              gap: "30px",
+              alignItems: "center",
               flexWrap: "wrap",
+              fontWeight: "bold",
             }}
           >
-            <a href="/services" style={goldButton}>
-              View Services
-            </a>
-
-            <a
-              href="mailto:tewaharoa@nativeinsights.co.nz"
-              style={outlineButton}
-            >
-              Book Consultation
+            <a href="/services" style={navLink}>Services</a>
+            <a href="/story" style={navLink}>Story</a>
+            <a href="/reviews" style={navLink}>Reviews</a>
+            <a href="mailto:tewaharoa@nativeinsights.co.nz" style={goldButton}>
+              Let&apos;s Kōrero
             </a>
           </div>
-        </div>
+        </nav>
+
+        <main
+          style={{
+            minHeight: "78vh",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            padding: "30px 20px",
+          }}
+        >
+          <section
+            style={{
+              width: "100%",
+              maxWidth: "760px",
+              textAlign: "center",
+              background: "rgba(7, 18, 7, 0.68)",
+              border: "1px solid rgba(195,164,109,0.38)",
+              borderRadius: "24px",
+              padding: "34px 36px",
+              boxShadow: "0 30px 80px rgba(0,0,0,0.35)",
+            }}
+          >
+            <img
+              src="/logo.png"
+              alt="Native Insights"
+              style={{
+                width: "135px",
+                marginBottom: "18px",
+              }}
+            />
+
+            <h1
+              style={{
+                fontSize: "48px",
+                lineHeight: "1.08",
+                margin: "0 0 22px",
+                color: "#F7F0E4",
+              }}
+            >
+              Native Insights |<br />
+              Ngā Māramatanga ā-Iwi
+            </h1>
+
+            <p style={bodyText}>
+              We support Māori businesses and kaupapa-led organisations to
+              strengthen the way they work, grow, and navigate the future.
+            </p>
+
+            <p style={bodyText}>
+              We bring together kaupapa Māori, practical systems, AI, digital
+              tools, and strategic support so your organisation can move forward
+              with clarity while staying grounded in who you are.
+            </p>
+
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                gap: "18px",
+                flexWrap: "wrap",
+                marginTop: "28px",
+              }}
+            >
+              <a href="/services" style={goldButton}>
+                View Services
+              </a>
+
+              <a
+                href="mailto:tewaharoa@nativeinsights.co.nz"
+                style={outlineButton}
+              >
+                Book Consultation
+              </a>
+            </div>
+          </section>
+        </main>
       </div>
     </div>
   );
 }
 
-const navStyle = {
+const navLink = {
   color: "#F7F0E4",
   textDecoration: "none",
   fontSize: "18px",
 };
 
+const bodyText = {
+  fontSize: "18px",
+  lineHeight: "1.65",
+  color: "#E8E1D5",
+  margin: "18px 0",
+};
+
 const goldButton = {
   background: "#C3A46D",
-  color: "#111",
-  padding: "14px 26px",
+  color: "#071007",
+  padding: "14px 28px",
   borderRadius: "999px",
   textDecoration: "none",
   fontWeight: "bold",
@@ -209,7 +187,7 @@ const goldButton = {
 const outlineButton = {
   border: "1px solid #C3A46D",
   color: "#F7F0E4",
-  padding: "14px 26px",
+  padding: "14px 28px",
   borderRadius: "999px",
   textDecoration: "none",
 };
