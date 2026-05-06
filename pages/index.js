@@ -3,200 +3,213 @@ export default function Home() {
     <div
       style={{
         minHeight: "100vh",
-        background: "#0B0B08",
-        color: "#F7F0E4",
+        position: "relative",
+        overflow: "hidden",
         fontFamily: "Arial, sans-serif",
-        padding: "60px 20px",
+        color: "#F7F0E4",
       }}
     >
+      {/* VIDEO BACKGROUND */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        style={{
+          position: "absolute",
+          width: "100%",
+          height: "100%",
+          objectFit: "cover",
+          top: 0,
+          left: 0,
+          zIndex: -2,
+        }}
+      >
+        <source
+          src="https://www.w3schools.com/howto/rain.mp4"
+          type="video/mp4"
+        />
+      </video>
+
+      {/* DARK OVERLAY */}
       <div
         style={{
-          maxWidth: "1100px",
-          margin: "0 auto",
+          position: "absolute",
+          inset: 0,
+          background: "rgba(0,0,0,0.55)",
+          zIndex: -1,
         }}
-      ><div
-  style={{
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    marginBottom: "60px",
-    flexWrap: "wrap",
-    gap: "20px",
-  }}
->
-  <div
-    style={{
-      fontSize: "20px",
-      fontWeight: "bold",
-      color: "#C3A46D",
-    }}
-  >
-    Native Insights NZ
-  </div>
+      />
 
-  <div
-    style={{
-      display: "flex",
-      gap: "20px",
-      flexWrap: "wrap",
-    }}
-  >
-    <a
-      href="/"
-      style={{
-        color: "#F7F0E4",
-        textDecoration: "none",
-      }}
-    >
-      Home
-    </a>
-
-    <a
-      href="/services"
-      style={{
-        color: "#F7F0E4",
-        textDecoration: "none",
-      }}
-    >
-      Services
-    </a>
-
-    <a
-      href="mailto:tewaharoa@nativeinsights.co.nz"
-      style={{
-        color: "#C3A46D",
-        textDecoration: "none",
-        fontWeight: "bold",
-      }}
-    >
-      Contact
-    </a>
-  </div>
-</div>
-        <h1
-          style={{
-            fontSize: "64px",
-            marginBottom: "20px",
-            lineHeight: "1",
-          }}
-        >
-          Native Insights NZ
-        </h1>
-
-        <p
-          style={{
-            fontSize: "22px",
-            maxWidth: "700px",
-            lineHeight: "1.6",
-            color: "#d6d0c4",
-          }}
-        >
-          Strategic systems grounded in kaupapa Māori —
-          supporting organisations through AI, operations,
-          growth, and long-term sustainability.
-        </p>
-
+      {/* NAVIGATION */}
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          padding: "30px 60px",
+          flexWrap: "wrap",
+          gap: "20px",
+        }}
+      >
         <div
           style={{
-            marginTop: "40px",
             display: "flex",
-            gap: "20px",
-            flexWrap: "wrap",
+            alignItems: "center",
+            gap: "14px",
           }}
         >
-          <a
-            href="mailto:tewaharoa@nativeinsights.co.nz"
+          <img
+            src="https://i.imgur.com/3H6XGQx.png"
+            alt="Native Insights Logo"
             style={{
-              background: "#C3A46D",
-              color: "#111",
-              padding: "14px 24px",
-              borderRadius: "999px",
-              textDecoration: "none",
+              width: "60px",
+              height: "60px",
+              objectFit: "contain",
+            }}
+          />
+
+          <div
+            style={{
+              fontSize: "26px",
               fontWeight: "bold",
             }}
           >
-            Book a Consultation
+            Native Insights
+          </div>
+        </div>
+
+        <div
+          style={{
+            display: "flex",
+            gap: "24px",
+            flexWrap: "wrap",
+          }}
+        >
+          <a href="/services" style={navStyle}>
+            Services
+          </a>
+
+          <a href="/" style={navStyle}>
+            Story
+          </a>
+
+          <a href="/" style={navStyle}>
+            Reviews
           </a>
 
           <a
             href="mailto:tewaharoa@nativeinsights.co.nz"
-            style={{
-              border: "1px solid #C3A46D",
-              color: "#F7F0E4",
-              padding: "14px 24px",
-              borderRadius: "999px",
-              textDecoration: "none",
-            }}
+            style={goldButton}
           >
-            Let's Kōrero
+            Let&apos;s Kōrero
           </a>
         </div>
+      </div>
 
+      {/* HERO CONTENT */}
+      <div
+        style={{
+          minHeight: "80vh",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          padding: "40px",
+        }}
+      >
         <div
           style={{
-            marginTop: "80px",
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
-            gap: "24px",
+            maxWidth: "900px",
+            textAlign: "center",
+            background: "rgba(0,0,0,0.45)",
+            backdropFilter: "blur(6px)",
+            padding: "50px",
+            borderRadius: "30px",
+            border: "1px solid rgba(255,255,255,0.08)",
           }}
         >
-          {[
-            "Te Pae Tawhiti | AI & Digital",
-            "Te Kaihautū | Executive VA",
-            "Te Puna Tautoko | Systems & Operations",
-            "Te Ahu Itū | Funding & Growth",
-            "Te Ara Rautaki | Strategy & Advisory",
-          ].map((service) => (
-            <div
-              key={service}
-              style={{
-                background: "#151512",
-                padding: "24px",
-                borderRadius: "24px",
-                border: "1px solid rgba(255,255,255,0.08)",
-              }}
-            >
-              <h2
-                style={{
-                  fontSize: "22px",
-                  marginBottom: "12px",
-                  color: "#C3A46D",
-                }}
-              >
-                {service}
-              </h2>
+          <img
+            src="https://i.imgur.com/3H6XGQx.png"
+            alt="Native Insights"
+            style={{
+              width: "140px",
+              marginBottom: "30px",
+            }}
+          />
 
-              <p
-                style={{
-                  lineHeight: "1.6",
-                  color: "#d6d0c4",
-                }}
-              >
-                Strategic support designed to strengthen
-                Māori organisations through systems,
-                innovation, and sustainable growth.
-              </p>
-            </div>
-          ))}
-        </div>
+          <h1
+            style={{
+              fontSize: "64px",
+              marginBottom: "20px",
+              lineHeight: "1.1",
+            }}
+          >
+            Native Insights |<br />
+            Ngā Māramatanga ā-Iwi
+          </h1>
 
-        <div
-          style={{
-            marginTop: "80px",
-            paddingTop: "40px",
-            borderTop: "1px solid rgba(255,255,255,0.08)",
-            color: "#999",
-          }}
-        >
-          <p>tewaharoa@nativeinsights.co.nz</p>
-          <p>021 02855384</p>
-          <p>Northland, Aotearoa New Zealand</p>
-
-          <p style={{ marginTop: "30px", fontSize: "14px" }}>
-            © 2026 Native Insights NZ
+          <p
+            style={{
+              fontSize: "24px",
+              lineHeight: "1.7",
+              color: "#E8E1D5",
+              marginBottom: "40px",
+            }}
+          >
+            Native Insights supports Māori businesses and
+            kaupapa-led organisations to strengthen the
+            way they work, grow, and navigate the future.
+            <br /><br />
+            We bring together kaupapa Māori, practical
+            systems, AI, digital tools, and strategic
+            support so your organisation can move forward
+            with clarity while staying grounded in who you are.
           </p>
+
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              gap: "20px",
+              flexWrap: "wrap",
+            }}
+          >
+            <a href="/services" style={goldButton}>
+              View Services
+            </a>
+
+            <a
+              href="mailto:tewaharoa@nativeinsights.co.nz"
+              style={outlineButton}
+            >
+              Book Consultation
+            </a>
+          </div>
         </div>
       </div>
     </div>
   );
 }
+
+const navStyle = {
+  color: "#F7F0E4",
+  textDecoration: "none",
+  fontSize: "18px",
+};
+
+const goldButton = {
+  background: "#C3A46D",
+  color: "#111",
+  padding: "14px 26px",
+  borderRadius: "999px",
+  textDecoration: "none",
+  fontWeight: "bold",
+};
+
+const outlineButton = {
+  border: "1px solid #C3A46D",
+  color: "#F7F0E4",
+  padding: "14px 26px",
+  borderRadius: "999px",
+  textDecoration: "none",
+};
