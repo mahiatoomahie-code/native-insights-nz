@@ -26,7 +26,7 @@ export default function Home() {
         }}
       >
         <source
-          src=src="https://cdn.coverr.co/videos/coverr-aerial-view-of-rocky-coastline-1560082467046?download=1080p"
+          src={"https://cdn.coverr.co/videos/coverr-aerial-view-of-rocky-coastline-1560082467046?download=1080p"}
           type="video/mp4"
         />
       </video>
