@@ -26,7 +26,7 @@ export default function Home() {
         }}
       >
         <source
-          src="https://www.w3schools.com/howto/rain.mp4"
+          src=src="https://cdn.coverr.co/videos/coverr-aerial-view-of-rocky-coastline-1560082467046?download=1080p"
           type="video/mp4"
         />
       </video>
@@ -36,7 +36,7 @@ export default function Home() {
         style={{
           position: "absolute",
           inset: 0,
-          background: "rgba(0,0,0,0.55)",
+          background: "linear-gradient(to bottom, rgba(0,0,0,0.45), rgba(0,0,0,0.72))",
           zIndex: -1,
         }}
       />
@@ -61,7 +61,7 @@ export default function Home() {
         >
           <img
             src="/logo.png"
-            alt="Native Insights Logo"
+            alt="NI Logo"
             style={{
               width: "60px",
               height: "60px",
