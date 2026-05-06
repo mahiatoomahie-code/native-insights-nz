@@ -36,7 +36,7 @@ export default function Home() {
         style={{
           position: "absolute",
           inset: 0,
-          background: "linear-gradient(to bottom, rgba(0,0,0,0.45), rgba(0,0,0,0.72))",
+          background: "linear-gradient(to bottom, linear-gradient(to bottom, rgba(8,16,8,0.35), rgba(0,0,0,0.65)), rgba(0,0,0,0.72))",
           zIndex: -1,
         }}
       />
@@ -119,13 +119,13 @@ export default function Home() {
       >
         <div
           style={{
-            maxWidth: "900px",
+            maxWidth: "720px",
             textAlign: "center",
-            background: "rgba(0,0,0,0.45)",
-            backdropFilter: "blur(6px)",
-            padding: "50px",
-            borderRadius: "30px",
-            border: "1px solid rgba(255,255,255,0.08)",
+            background: "rgba(10, 18, 10, 0.58)",
+            backdropFilter: "blur(4px)",
+            padding: "32px",
+            borderRadius: "22px",
+            border: "1px solid rgba(195,164,109,0.35)",
           }}
         >
           <img
@@ -139,7 +139,7 @@ export default function Home() {
 
           <h1
             style={{
-              fontSize: "64px",
+              fontSize: "48px",
               marginBottom: "20px",
               lineHeight: "1.1",
             }}
@@ -150,13 +150,13 @@ export default function Home() {
 
           <p
             style={{
-              fontSize: "24px",
+              fontSize: "18px",
               lineHeight: "1.7",
               color: "#E8E1D5",
               marginBottom: "40px",
             }}
           >
-            Native Insights supports Māori businesses and
+            We support Māori businesses and
             kaupapa-led organisations to strengthen the
             way they work, grow, and navigate the future.
             <br /><br />
