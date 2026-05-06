@@ -14,7 +14,65 @@ export default function Home() {
           maxWidth: "1100px",
           margin: "0 auto",
         }}
-      >
+      ><div
+  style={{
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    marginBottom: "60px",
+    flexWrap: "wrap",
+    gap: "20px",
+  }}
+>
+  <div
+    style={{
+      fontSize: "20px",
+      fontWeight: "bold",
+      color: "#C3A46D",
+    }}
+  >
+    Native Insights NZ
+  </div>
+
+  <div
+    style={{
+      display: "flex",
+      gap: "20px",
+      flexWrap: "wrap",
+    }}
+  >
+    <a
+      href="/"
+      style={{
+        color: "#F7F0E4",
+        textDecoration: "none",
+      }}
+    >
+      Home
+    </a>
+
+    <a
+      href="/services"
+      style={{
+        color: "#F7F0E4",
+        textDecoration: "none",
+      }}
+    >
+      Services
+    </a>
+
+    <a
+      href="mailto:tewaharoa@nativeinsights.co.nz"
+      style={{
+        color: "#C3A46D",
+        textDecoration: "none",
+        fontWeight: "bold",
+      }}
+    >
+      Contact
+    </a>
+  </div>
+</div>
         <h1
           style={{
             fontSize: "64px",
