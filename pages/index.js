@@ -26,7 +26,7 @@ export default function Home() {
         }}
       >
         <source
-          src="https://videos.pexels.com/video-files/854671/854671-hd_1920_1080_25fps.mp4"
+          src="https://videos.pexels.com/video-files/3255275/3255275-hd_1920_1080_25fps.mp4"
           type="video/mp4"
         />
       </video>
