@@ -6,7 +6,6 @@ export default function Services() {
       subtitle: "AI & Digital Navigation",
       image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=900&q=80",
       offer: [
-        offer: [
   "AI integration for daily mahi",
   "Automating repetitive tasks",
   "Digital workflow design",
