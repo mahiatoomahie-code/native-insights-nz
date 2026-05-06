@@ -60,7 +60,7 @@ export default function Home() {
           }}
         >
           <img
-            src="https://i.imgur.com/3H6XGQx.png"
+            src="/logo.png"
             alt="Native Insights Logo"
             style={{
               width: "60px",
@@ -129,7 +129,7 @@ export default function Home() {
           }}
         >
           <img
-            src="https://i.imgur.com/3H6XGQx.png"
+            src="/logo.png"
             alt="Native Insights"
             style={{
               width: "140px",
