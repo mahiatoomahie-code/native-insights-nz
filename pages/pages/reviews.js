@@ -235,4 +235,9 @@ const goldButton = {
   display: "inline-block",
   marginTop: "18px",
   background: "#C3A46D",
-  color: "#
+  color: "#071007",
+  padding: "13px 26px",
+  borderRadius: "999px",
+  textDecoration: "none",
+  fontWeight: "bold",
+};
